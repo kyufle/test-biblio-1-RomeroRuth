@@ -4,7 +4,7 @@ const { By, until } = require("selenium-webdriver");
 const assert = require('assert');
 
 //.env
-require('dotev').config()
+require('dotenv').config()
 console.log(process.env)
 // heredem una classe amb un sol mètode test()
 // emprem this.driver per utilitzar Selenium
