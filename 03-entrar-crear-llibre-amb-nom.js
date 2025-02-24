@@ -33,21 +33,21 @@
                     By.css('input[value="Iniciar sessió"]')), 10000);
             sendButton.click()
 
-        // 5. Esperem que aparegui l'enllaç per afegir un llibre
-        await this.driver.wait(until.elementLocated(By.xpath("//a[@href='/admin/biblio/llibre/add/']")), 5000);
-        await this.driver.findElement(By.xpath("//a[@href='/admin/biblio/llibre/add/']")).click();
+            // 4. Esperem que aparegui l'enllaç per afegir un llibre
+            await this.driver.wait(until.elementLocated(By.xpath("//a[@href='/admin/biblio/llibre/add/']")), 5000);
+            await this.driver.findElement(By.xpath("//a[@href='/admin/biblio/llibre/add/']")).click();
 
-        // 6. Afegim el títol del llibre
-        await this.driver.findElement(By.xpath("//input[@name='titol']")).sendKeys(book_title);
+            // 5. Afegim el títol del llibre
+            await this.driver.findElement(By.xpath("//input[@name='titol']")).sendKeys(book_title);
 
-        // 7. Desem el llibre
-        await this.driver.findElement(By.xpath("//input[@value='Desar']")).click();
+            // 6. Desem el llibre
+            await this.driver.findElement(By.xpath("//input[@value='Desar']")).click();
 
-        // 8. Esperem un moment i tanquem la sessió
-        await this.driver.sleep(1000);
-        await this.driver.findElement(By.xpath("//button[@type='submit']")).click();
+            // 7. Esperem un moment i tanquem la sessió
+            await this.driver.sleep(1000);
+            await this.driver.findElement(By.xpath("//button[@type='submit']")).click();
 
-        console.log("TEST OK");
+            console.log("TEST OK");
     }
 }
 
